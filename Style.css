@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Card */
+.header-card {
+    grid-column: 4 / 10;
+    background: #6366F1;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header-card h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+/* Create Post Card */
+.create-post {
+    grid-column: 1 / 4;
+    background: #ffffff;
+}
+
+.create-post h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.create-button {
+    background: #FBD34D;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* AI Writing Card */
+.ai-writing {
+    grid-column: 1 / 4;
+    background: #FBD34D;
+}
+
+/* Account Management Card */
+.account-management {
+    grid-column: 4 / 8;
+    background: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.growth-stat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Schedule Card */
+.schedule {
+    grid-column: 8 / 12;
+    background: #FBD34D;
+}
+
+/* Analytics Card */
+.analytics {
+    grid-column: 8 / 12;
+    grid-row: 3 / 5;
+    background: #6366F1;
+    color: white;
+}
+
+.chart {
+    height: 180px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.bar {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px 4px 0 0;
+}
+
+/* Best Time Card */
+.best-time {
+    grid-column: 10 / 13;
+    background: white;
+}
+
+.best-time .chart {
+    height: 120px;
+}
+
+.best-time .bar {
+    background: #6366F1;
+}
+
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .header-card {
+        grid-column: 1 / -1;
+    }
+
+    .create-post,
+    .ai-writing {
+        grid-column: 1 / 4;
+    }
+
+    .account-management,
+    .schedule {
+        grid-column: 4 / 7;
+    }
+
+    .analytics {
+        grid-column: 1 / 7;
+        grid-row: auto;
+    }
+
+    .best-time {
+        grid-column: 1 / 7;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .create-post,
+    .ai-writing,
+    .account-management,
+    .schedule,
+    .analytics,
+    .best-time {
+        grid-column: 1 / -1;
+    }
+
+    body {
+        padding: 1rem;
+    }
+}
